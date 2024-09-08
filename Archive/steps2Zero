@@ -1,0 +1,28 @@
+fun main() {
+
+    Solution().run { numberOfSteps(20) }
+        .also { println(it) }
+}
+
+
+class Solution {
+    fun numberOfSteps(num: Int): Int {
+
+        var n = num
+        var steps = 0
+        while (n != 0)
+        {
+            if (n % 2 == 0)
+            {
+                n /= 2
+            }
+            else
+            {
+                n--
+            }
+            steps++
+        }
+
+        return steps
+    }
+}
