@@ -1,0 +1,30 @@
+fun main() {
+
+    var exampleIntArray : Array<IntArray> = arrayOf(
+        intArrayOf(1,1,1),
+        intArrayOf(2,2,2) )
+    Solution().run { maximumWealth(exampleIntArray)
+        .also { println(it) }}
+
+}
+
+class Solution {
+    fun maximumWealth(accounts: Array<IntArray>): Int {
+        var amount = 0
+        var maxWealth = 0
+        for (i in 0 until accounts.size)
+        {
+            for (j in 0 until accounts[i].size)
+            {
+               amount += accounts[i][j]
+            }
+
+            if (maxWealth < amount)
+            {
+                maxWealth = amount
+            }
+            amount = 0
+        }
+        return maxWealth
+    }
+}
