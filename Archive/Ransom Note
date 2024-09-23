@@ -1,0 +1,21 @@
+
+fun main(){
+
+    var ransome = "11123456"
+    var magazine = "1123456"
+    var result = ransomeNode(ransome,magazine)
+    println(result)
+}
+
+
+
+fun ransomeNode(ransome: String, magazine: String):Boolean{
+    var copyMagizine = magazine
+    for (i in ransome) {
+        if (i in copyMagizine) {
+            copyMagizine = copyMagizine.replaceFirst("${i}","")
+        }
+        else return false
+    }
+    return true
+}
