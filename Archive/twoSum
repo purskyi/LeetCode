@@ -1,0 +1,30 @@
+
+/*Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].*/
+
+fun main(){
+
+    var nums: IntArray = intArrayOf(3,2,4)
+    var target = 6
+    println(twoSum(nums,target)[0])
+    println(twoSum(nums,target)[1])
+}
+
+
+
+fun twoSum(nums: IntArray, target: Int): IntArray {
+
+
+
+    for (i in 0 ..nums.lastIndex){
+        for (j in i+1 .. nums.lastIndex){
+            if (nums[i] + nums[j] == target){
+                return intArrayOf(i,j)
+            }
+        }
+    }
+
+    return nums
+}
+
