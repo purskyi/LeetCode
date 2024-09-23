@@ -1,0 +1,15 @@
+
+fun main(){
+
+    var ownList = LinkedList(Node(1))
+
+    ownList.addNode(Node(5))
+    ownList.addNode(Node(10))
+    ownList.addNode(Node(20))
+    ownList.addNode(Node(50))
+
+    println(ownList.toString())
+    ownList.turnBackward()
+    ownList.removeLast()
+    println(ownList.toString())
+}

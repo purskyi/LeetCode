@@ -1,0 +1,19 @@
+import ArchiveData.LinkedList.LinkedList
+import ArchiveData.LinkedList.Node
+
+fun main(){
+
+    var array = arrayOf<Int>(1,2,3,4,5,6)
+
+    var ownList = LinkedList()
+
+    ownList.fillFromArray(array)
+    ownList.removeFirst()
+
+
+    println(ownList.toString())
+    println(ownList.count())
+
+
+    println(ownList.getMiddle())
+}
