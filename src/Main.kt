@@ -1,6 +1,10 @@
+import kotlin.random.Random
+
 fun main() {
-        var list1 = mutableListOf(-10,3,5,13,57,155,1666,0,0,0,0,0,0,0,0,0,0) //7
-        var list2 = mutableListOf(-20,-5,-2,2,5,7,9,20,100,176554) // 10
+    val list1 = IntArray(10) { Random.nextInt(-100, 100) }.sorted().toMutableList()
+    val list2 = IntArray(10) { Random.nextInt(-100, 100) }.sorted().toList()
+
+    list2.forEach { it -> list1.addLast(0) }
 
         var sizeWhole = list1.size-1
         var size2 = list2.size - 1
